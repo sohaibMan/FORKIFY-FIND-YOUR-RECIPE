@@ -1,0 +1,57 @@
+{
+  "mappings": {
+    "dynamic": false,
+    "fields": {
+      "RecipeName": [
+        {
+          "dynamic": true,
+          "type": "document"
+        },
+        {
+          "type": "autocomplete"
+        }
+      ],
+      "data": {
+        "fields": {
+          "recipes": {
+            "fields": {
+              "publisher": [
+                {
+                  "dynamic": true,
+                  "type": "document"
+                },
+                {
+                  "type": "autocomplete"
+                }
+              ],
+              "title": [
+                {
+                  "dynamic": true,
+                  "type": "document"
+                },
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "autocomplete"
+                }
+              ]
+            },
+            "type": "document"
+          }
+        },
+        "type": "document"
+      }
+    }
+  },
+  "synonyms": [
+    {
+      "analyzer": "lucene.keyword",
+      "name": "synonym_mapping",
+      "source": {
+        "collection": "sample_synonyms"
+      }
+    }
+  ]
+}
+

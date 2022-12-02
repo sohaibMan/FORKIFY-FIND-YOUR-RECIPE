@@ -1,0 +1,21 @@
+{
+  "name": "firkifyapp",
+  "version": "1.0.0",
+  "browserslist": "> 0.5%, last 2 versions, not dead",
+  "description": "",
+  "scripts": {
+    "start": "parcel index.html",
+    "build": "parcel build index.html"
+  },
+  "author": "Sohaib manah",
+  "license": "ISC",
+  "devDependencies": {
+    "@parcel/transformer-sass": "^2.7.0",
+    "parcel": "^2.7.0"
+  },
+  "dependencies": {
+    "core-js": "^3.24.1",
+    "regenerator-runtime": "^0.13.9",
+    "sass": "^1.54.5"
+  }
+}
