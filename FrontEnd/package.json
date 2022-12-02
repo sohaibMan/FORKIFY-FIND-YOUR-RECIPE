@@ -4,7 +4,7 @@
   "browserslist": "> 0.5%, last 2 versions, not dead",
   "description": "",
   "scripts": {
-    "start": "parcel index.html",
+    "start": "parcel index.html --open",
     "build": "parcel build index.html"
   },
   "author": "Sohaib manah",

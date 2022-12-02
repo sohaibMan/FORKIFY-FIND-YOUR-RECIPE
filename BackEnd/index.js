@@ -4,7 +4,7 @@ const cors = require("cors");
 const { MongoClient, ServerApiVersion, Db, ObjectId } = require("mongodb");
 const PORT = 8080;
 // create a free atlas  and full the .env file with the following information PASSWORD=yourpassword USERNAME=yourusername CLUSTERNAME=yourclustername
-const uri = `mongodb+srv://${process.env.USERNAME}:${process.env.PASSWORD}@${process.env.CLUSTERNAME}/?retryWrites=true&w=majority `;
+const uri = `mongodb+srv://${process.env.USER_NAME}:${process.env.PASSWORD}@${process.env.CLUSTERNAME}/?retryWrites=true&w=majority `;
 const client = new MongoClient(uri, {
   useNewUrlParser: true,
   useUnifiedTopology: true,
@@ -61,7 +61,7 @@ try {
             recipes: [],
           },
         });
-      res.send(result[0]);
+      else res.send(result[0]);
     } else {
       res.statusCode = 403;
       res.send({ err: "IP KEY IS NOT VALID" });
@@ -98,6 +98,7 @@ try {
   console.log(e);
 } finally {
   client.close();
+  // process.exit(0);
 }
 
 //?search=:search

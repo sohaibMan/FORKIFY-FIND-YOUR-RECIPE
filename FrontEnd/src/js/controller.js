@@ -46,10 +46,10 @@ const controlSearchResults = async function () {
   try {
     results.renderSpiner();
     const query = SearchView.getQuery();
-    console.log(
-      "🚀 ~ file: controller.js:47 ~ controlSearchResults ~ query",
-      query
-    );
+    // console.log(
+    //   "🚀 ~ file: controller.js:47 ~ controlSearchResults ~ query",
+    //   query
+    // );
     if (!query) return;
     await model.loadSearchResults(query);
     results.render(model.getSearchResultsPage());

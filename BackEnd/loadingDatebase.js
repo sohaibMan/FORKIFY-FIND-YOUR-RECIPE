@@ -1,8 +1,10 @@
 require("dotenv").config();
 const meals = require("./meals.json");
 const { MongoClient, ServerApiVersion, Db } = require("mongodb");
+
 // create a free atlas  and full the .env file with the following information PASSWORD=yourpassword USERNAME=yourusername CLUSTERNAME=yourclustername
-const uri = `mongodb+srv://${process.env.USERNAME}:${process.env.PASSWORD}@${process.env.CLUSTERNAME}/?retryWrites=true&w=majority `;
+const uri = `mongodb+srv://${process.env.USER_NAME}:${process.env.PASSWORD}@${process.env.CLUSTERNAME}/?retryWrites=true&w=majority `;
+// console.log("🚀 ~ file: loadingDatebase.:7 ~ uri", uri);
 const client = new MongoClient(uri, {
   useNewUrlParser: true,
   useUnifiedTopology: true,
@@ -14,7 +16,6 @@ const accountsCollection = client.db(dbname).collection(collection_name);
 
 (async function main() {
   try {
-
     console.log("database loaded is loading ...");
     client.connect();
     if (!(await accountsCollection.countDocuments())) {
@@ -34,6 +35,6 @@ const accountsCollection = client.db(dbname).collection(collection_name);
     console.log(e);
   } finally {
     client.close();
-    process.exit(0)
+    process.exit(0);
   }
 })();

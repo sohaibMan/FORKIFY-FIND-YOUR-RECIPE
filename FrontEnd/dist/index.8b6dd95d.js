@@ -142,14 +142,14 @@
       this[globalName] = mainExports;
     }
   }
-})({"fA0o9":[function(require,module,exports) {
+})({"cEtK8":[function(require,module,exports) {
 "use strict";
 var global = arguments[3];
 var HMR_HOST = null;
-var HMR_PORT = null;
+var HMR_PORT = 1234;
 var HMR_SECURE = false;
-var HMR_ENV_HASH = "d6ea1d42532a7575";
-module.bundle.HMR_BUNDLE_ID = "d113fd8ce37f48ea";
+var HMR_ENV_HASH = "916932b22e4085ab";
+module.bundle.HMR_BUNDLE_ID = "0a156ff98b6dd95d";
 /* global HMR_HOST, HMR_PORT, HMR_ENV_HASH, HMR_SECURE, chrome, browser, globalThis, __parcel__import__, __parcel__importScripts__, ServiceWorkerGlobalScope */ /*::
 import type {
   HMRAsset,
@@ -531,7 +531,7 @@ function hmrAcceptRun(bundle, id) {
     acceptedAssets[id] = true;
 }
 
-},{}],"aenu9":[function(require,module,exports) {
+},{}],"WhRD4":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 //!imports
 var _runtime = require("regenerator-runtime/runtime");
@@ -580,10 +580,7 @@ const controlSearchResults = async function() {
     try {
         (0, _resultsViewJsDefault.default).renderSpiner();
         const query = (0, _searchViewJsDefault.default).getQuery();
-        // console.log(
-        //   "🚀 ~ file: controller.js:47 ~ controlSearchResults ~ query",
-        //   query
-        // );
+        console.log("\uD83D\uDE80 ~ file: controller.js:47 ~ controlSearchResults ~ query", query);
         if (!query) return;
         await _modelJs.loadSearchResults(query);
         (0, _resultsViewJsDefault.default).render(_modelJs.getSearchResultsPage());
@@ -649,7 +646,7 @@ const init = function() {
 };
 init();
 
-},{"regenerator-runtime/runtime":"dXNgZ","./model.js":"Y4A21","./views/recipeView.js":"l60JC","./views/searchView.js":"9OQAM","./views/resultsView.js":"cSbZE","./views/paginationView.js":"6z7bi","./views/bookmarkView.js":"7YaI3","./views/addrecipeView":"7kuHF","./config":"k5Hzs","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"dXNgZ":[function(require,module,exports) {
+},{"regenerator-runtime/runtime":"12Ae8","./model.js":"91W0b","./views/recipeView.js":"h28SC","./views/searchView.js":"b94nQ","./views/resultsView.js":"cvqv5","./views/paginationView.js":"lSUB0","./views/bookmarkView.js":"60WaL","./views/addrecipeView":"5gUhV","./config":"h3Fhn","@parcel/transformer-js/src/esmodule-helpers.js":"5oERU"}],"12Ae8":[function(require,module,exports) {
 /**
  * Copyright (c) 2014-present, Facebook, Inc.
  *
@@ -1230,7 +1227,7 @@ try {
     else Function("r", "regeneratorRuntime = r")(runtime);
 }
 
-},{}],"Y4A21":[function(require,module,exports) {
+},{}],"91W0b":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "state", ()=>state);
@@ -1396,7 +1393,7 @@ const init = function() {
 };
 init();
 
-},{"./config.js":"k5Hzs","./helpers.js":"hGI1E","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"k5Hzs":[function(require,module,exports) {
+},{"./config.js":"h3Fhn","./helpers.js":"fe8xh","@parcel/transformer-js/src/esmodule-helpers.js":"5oERU"}],"h3Fhn":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "API_URL", ()=>API_URL);
@@ -1407,14 +1404,14 @@ parcelHelpers.export(exports, "RESULTS_PER_PAGE", ()=>RESULTS_PER_PAGE);
 parcelHelpers.export(exports, "AUTO_BOOKMARK_OWN_RECIPES", ()=>AUTO_BOOKMARK_OWN_RECIPES);
 parcelHelpers.export(exports, "MODAL_TIMEOUT_SEC", ()=>MODAL_TIMEOUT_SEC);
 const API_URL = "https://forkify-api.herokuapp.com/api/v2/recipes";
-const API_KEY = "22be149a-f3ad-4284-a5a5-30c742778aa0"; //just take it hahaha
+const API_KEY = "22be149a-f3ad-4284-a5a5-30c742778aa0";
 const SEARCH_API_URL = "http://localhost:8080/recipes";
 const TIMEOUTSECONDS = 10;
 const RESULTS_PER_PAGE = 12;
 const AUTO_BOOKMARK_OWN_RECIPES = 1;
 const MODAL_TIMEOUT_SEC = 2.5;
 
-},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"gkKU3":[function(require,module,exports) {
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"5oERU"}],"5oERU":[function(require,module,exports) {
 exports.interopDefault = function(a) {
     return a && a.__esModule ? a : {
         default: a
@@ -1444,7 +1441,7 @@ exports.export = function(dest, destName, get) {
     });
 };
 
-},{}],"hGI1E":[function(require,module,exports) {
+},{}],"fe8xh":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "getJSON", ()=>getJSON);
@@ -1497,9 +1494,11 @@ const sentJSON = async function(url, recipe) {
     }
 };
 
-},{"regenerator-runtime":"dXNgZ","./config.js":"k5Hzs","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"l60JC":[function(require,module,exports) {
+},{"regenerator-runtime":"12Ae8","./config.js":"h3Fhn","@parcel/transformer-js/src/esmodule-helpers.js":"5oERU"}],"h28SC":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
+var _definePropertyMjs = require("@swc/helpers/src/_define_property.mjs");
+var _definePropertyMjsDefault = parcelHelpers.interopDefault(_definePropertyMjs);
 // import { Fraction } from 'fractional';
 // var Fraction = require('fraction.js');
 // console.log(Fraction);
@@ -1508,9 +1507,6 @@ var _iconsSvgDefault = parcelHelpers.interopDefault(_iconsSvg);
 var _viewJs = require("./view.js");
 var _viewJsDefault = parcelHelpers.interopDefault(_viewJs);
 class RecipeView extends (0, _viewJsDefault.default) {
-    _parentElment = document.querySelector(".recipe");
-    _errorMsg = "we could not find your recipete, Please try again";
-    _simpleMsg = "";
     _gernerateMarkup() {
         return `
   <figure class="recipe__fig">
@@ -1623,13 +1619,14 @@ class RecipeView extends (0, _viewJsDefault.default) {
     }
     _generateMarkupIngredient(ings) {
         const returnIng = (ing)=>{
+            var _quantity;
             return ` 
       <li class="recipe__ingredient">
       <svg class="recipe__icon">
      <use href="${0, _iconsSvgDefault.default}#icon-check"></use>
      </svg>
      
-     <div class="recipe__quantity">${ing.quantity ?? ""}
+     <div class="recipe__quantity">${(_quantity = ing.quantity) !== null && _quantity !== void 0 ? _quantity : ""}
          </div>
     <div class="recipe__description">
       <span class="recipe__unit">${ing.unit}</span>
@@ -1640,13 +1637,34 @@ class RecipeView extends (0, _viewJsDefault.default) {
         };
         return ings.map((ing)=>returnIng(ing)).join(" ");
     }
+    constructor(...args){
+        super(...args);
+        (0, _definePropertyMjsDefault.default)(this, "_parentElment", document.querySelector(".recipe"));
+        (0, _definePropertyMjsDefault.default)(this, "_errorMsg", "we could not find your recipete, Please try again");
+        (0, _definePropertyMjsDefault.default)(this, "_simpleMsg", "");
+    }
 }
 exports.default = new RecipeView();
 
-},{"url:../../img/icons.svg":"loVOp","./view.js":"bWlJ9","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"loVOp":[function(require,module,exports) {
-module.exports = require("./helpers/bundle-url").getBundleURL("hWUTQ") + "icons.dfd7a6db.svg" + "?" + Date.now();
+},{"@swc/helpers/src/_define_property.mjs":"2NxdC","url:../../img/icons.svg":"1fsn3","./view.js":"f8v16","@parcel/transformer-js/src/esmodule-helpers.js":"5oERU"}],"2NxdC":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+function _defineProperty(obj, key, value) {
+    if (key in obj) Object.defineProperty(obj, key, {
+        value: value,
+        enumerable: true,
+        configurable: true,
+        writable: true
+    });
+    else obj[key] = value;
+    return obj;
+}
+exports.default = _defineProperty;
 
-},{"./helpers/bundle-url":"lgJ39"}],"lgJ39":[function(require,module,exports) {
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"5oERU"}],"1fsn3":[function(require,module,exports) {
+module.exports = require("./helpers/bundle-url").getBundleURL("RFSF5") + "icons.36a3904d.svg" + "?" + Date.now();
+
+},{"./helpers/bundle-url":"jkqJ4"}],"jkqJ4":[function(require,module,exports) {
 "use strict";
 var bundleURL = {};
 function getBundleURLCached(id) {
@@ -1680,14 +1698,15 @@ exports.getBundleURL = getBundleURLCached;
 exports.getBaseURL = getBaseURL;
 exports.getOrigin = getOrigin;
 
-},{}],"bWlJ9":[function(require,module,exports) {
+},{}],"f8v16":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "default", ()=>view);
+var _definePropertyMjs = require("@swc/helpers/src/_define_property.mjs");
+var _definePropertyMjsDefault = parcelHelpers.interopDefault(_definePropertyMjs);
 var _iconsSvg = require("url:../../img/icons.svg");
 var _iconsSvgDefault = parcelHelpers.interopDefault(_iconsSvg);
 class view {
-    // parnet class
-    _data;
     /**
    * render the data to the html using a _gernerateMarkup() function with replacing all elments
    * @param {Object|object[]} data The data to be rendered (e.g reciped)
@@ -1714,8 +1733,9 @@ class view {
         const newElments = Array.from(newDom.querySelectorAll("*"));
         const currnetElments = Array.from(this._parentElment.querySelectorAll("*"));
         newElments.forEach((newEl, i)=>{
+            var ref;
             const curEl = currnetElments[i];
-            if (!newEl.isEqualNode(curEl) && newEl.firstChild?.nodeValue.trim() !== ``) curEl.textContent = newEl.textContent;
+            if (!newEl.isEqualNode(curEl) && ((ref = newEl.firstChild) === null || ref === void 0 ? void 0 : ref.nodeValue.trim()) !== ``) curEl.textContent = newEl.textContent;
             // update attribues from current to new
             if (!newEl.isEqualNode(curEl)) Array.from(newEl.attributes).forEach((atrr)=>curEl.setAttribute(atrr.name, atrr.value));
         });
@@ -1767,19 +1787,22 @@ class view {
 `;
         this._parentElment.insertAdjacentElement("beforeend", markup.toDomElement());
     }
+    constructor(){
+        // parnet class
+        (0, _definePropertyMjsDefault.default)(this, "_data", void 0);
+    }
 }
-exports.default = view;
 
-},{"url:../../img/icons.svg":"loVOp","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"9OQAM":[function(require,module,exports) {
+},{"@swc/helpers/src/_define_property.mjs":"2NxdC","url:../../img/icons.svg":"1fsn3","@parcel/transformer-js/src/esmodule-helpers.js":"5oERU"}],"b94nQ":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
+var _definePropertyMjs = require("@swc/helpers/src/_define_property.mjs");
+var _definePropertyMjsDefault = parcelHelpers.interopDefault(_definePropertyMjs);
 class SearchView {
-    _parentEl = document.querySelector(".search");
     getQuery() {
         // console.log(this._parentEl.querySelector('.search__field').value);
         const query = this._parentEl.querySelector(".search__field").value;
-        // console.log("🚀 ~ file: searchView.js:7 ~ SearchView ~ getQuery ~ query", query)
-        // console.log(this._parentEl.querySelector(".search__field"));
+        console.log(query);
         this._clearInput();
         return query;
     }
@@ -1788,33 +1811,36 @@ class SearchView {
             e.preventDefault();
             handler();
         });
-        this._parentEl.addEventListener("input", function() {
-            // console.log(e.target.value);
-            handler();
-        // console.log(e.target.value);
-        });
     }
     _clearInput() {
-    // this._parentEl.querySelector(".search__field").value = "";
-    // do nothing
+        this._parentEl.querySelector(".search__field").value = "";
+    }
+    constructor(){
+        (0, _definePropertyMjsDefault.default)(this, "_parentEl", document.querySelector(".search"));
     }
 }
 exports.default = new SearchView();
 
-},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"cSbZE":[function(require,module,exports) {
+},{"@swc/helpers/src/_define_property.mjs":"2NxdC","@parcel/transformer-js/src/esmodule-helpers.js":"5oERU"}],"cvqv5":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
+var _definePropertyMjs = require("@swc/helpers/src/_define_property.mjs");
+var _definePropertyMjsDefault = parcelHelpers.interopDefault(_definePropertyMjs);
 var _previewVueJs = require("./previewVue.js");
 var _previewVueJsDefault = parcelHelpers.interopDefault(_previewVueJs);
 class ResultsView extends (0, _previewVueJsDefault.default) {
-    _errorMsg = `we could not find your query , Please try again with another name`;
-    _parentElment = document.querySelector(".results");
+    constructor(...args){
+        super(...args);
+        (0, _definePropertyMjsDefault.default)(this, "_errorMsg", `we could not find your query , Please try again with another name`);
+        (0, _definePropertyMjsDefault.default)(this, "_parentElment", document.querySelector(".results"));
+    }
 }
 exports.default = new ResultsView();
 
-},{"./previewVue.js":"9N3DA","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"9N3DA":[function(require,module,exports) {
+},{"@swc/helpers/src/_define_property.mjs":"2NxdC","./previewVue.js":"7aFHL","@parcel/transformer-js/src/esmodule-helpers.js":"5oERU"}],"7aFHL":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "default", ()=>previewVue);
 var _view = require("./view");
 var _viewDefault = parcelHelpers.interopDefault(_view);
 var _iconsSvg = require("url:../../img/icons.svg");
@@ -1849,17 +1875,17 @@ class previewVue extends (0, _viewDefault.default) {
     `;
     }
 }
-exports.default = previewVue;
 
-},{"./view":"bWlJ9","url:../../img/icons.svg":"loVOp","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"6z7bi":[function(require,module,exports) {
+},{"./view":"f8v16","url:../../img/icons.svg":"1fsn3","@parcel/transformer-js/src/esmodule-helpers.js":"5oERU"}],"lSUB0":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
+var _definePropertyMjs = require("@swc/helpers/src/_define_property.mjs");
+var _definePropertyMjsDefault = parcelHelpers.interopDefault(_definePropertyMjs);
 var _view = require("./view");
 var _viewDefault = parcelHelpers.interopDefault(_view);
 var _iconsSvg = require("url:../../img/icons.svg");
 var _iconsSvgDefault = parcelHelpers.interopDefault(_iconsSvg);
 class PaginationView extends (0, _viewDefault.default) {
-    _parentElment = document.querySelector(".pagination");
     _gernerateMarkup() {
         //SECNARIONS
         // _data contains modle.state.search objes
@@ -1917,41 +1943,40 @@ class PaginationView extends (0, _viewDefault.default) {
             handler(goToPage);
         });
     }
+    constructor(...args){
+        super(...args);
+        (0, _definePropertyMjsDefault.default)(this, "_parentElment", document.querySelector(".pagination"));
+    }
 }
 exports.default = new PaginationView();
 
-},{"./view":"bWlJ9","url:../../img/icons.svg":"loVOp","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"7YaI3":[function(require,module,exports) {
+},{"@swc/helpers/src/_define_property.mjs":"2NxdC","./view":"f8v16","url:../../img/icons.svg":"1fsn3","@parcel/transformer-js/src/esmodule-helpers.js":"5oERU"}],"60WaL":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
+var _definePropertyMjs = require("@swc/helpers/src/_define_property.mjs");
+var _definePropertyMjsDefault = parcelHelpers.interopDefault(_definePropertyMjs);
 var _previewVueJs = require("./previewVue.js");
 var _previewVueJsDefault = parcelHelpers.interopDefault(_previewVueJs);
 class bookmarkView extends (0, _previewVueJsDefault.default) {
-    _errorMsg = `No bookmarks yet ,Find it and bookmark it  `;
-    _parentElment = document.querySelector(".bookmarks__list");
     addHandlerInit(handler) {
         window.addEventListener("load", handler);
+    }
+    constructor(...args){
+        super(...args);
+        (0, _definePropertyMjsDefault.default)(this, "_errorMsg", `No bookmarks yet ,Find it and bookmark it  `);
+        (0, _definePropertyMjsDefault.default)(this, "_parentElment", document.querySelector(".bookmarks__list"));
     }
 }
 exports.default = new bookmarkView();
 
-},{"./previewVue.js":"9N3DA","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"7kuHF":[function(require,module,exports) {
+},{"@swc/helpers/src/_define_property.mjs":"2NxdC","./previewVue.js":"7aFHL","@parcel/transformer-js/src/esmodule-helpers.js":"5oERU"}],"5gUhV":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
+var _definePropertyMjs = require("@swc/helpers/src/_define_property.mjs");
+var _definePropertyMjsDefault = parcelHelpers.interopDefault(_definePropertyMjs);
 var _view = require("./view");
 var _viewDefault = parcelHelpers.interopDefault(_view);
 class addRecipeView extends (0, _viewDefault.default) {
-    _parentElment = document.querySelector(".upload");
-    _winodw = document.querySelector(".add-recipe-window");
-    _overlay = document.querySelector(".overlay");
-    _btnwOpen = document.querySelector(".nav__btn--add-recipe");
-    _btnwClose = document.querySelector(".btn--close-modal");
-    _simpleMsg = "Recipe was succefffully uploded ";
-    _errorMsg = "opps , cannot upload because bad connection your recipe please retry again  ";
-    constructor(){
-        super();
-        this._addHandelShowWindow();
-        this._addHandelHideWindowWindow();
-    }
     _gernerateMarkup() {
         return `
     <div class="upload__column">
@@ -2053,9 +2078,22 @@ class addRecipeView extends (0, _viewDefault.default) {
         this._overlay.classList.toggle("hidden");
         this._winodw.classList.toggle("hidden");
     }
+    constructor(){
+        super();
+        (0, _definePropertyMjsDefault.default)(this, "_parentElment", document.querySelector(".upload")) //form
+        ;
+        (0, _definePropertyMjsDefault.default)(this, "_winodw", document.querySelector(".add-recipe-window"));
+        (0, _definePropertyMjsDefault.default)(this, "_overlay", document.querySelector(".overlay"));
+        (0, _definePropertyMjsDefault.default)(this, "_btnwOpen", document.querySelector(".nav__btn--add-recipe"));
+        (0, _definePropertyMjsDefault.default)(this, "_btnwClose", document.querySelector(".btn--close-modal"));
+        (0, _definePropertyMjsDefault.default)(this, "_simpleMsg", "Recipe was succefffully uploded ");
+        (0, _definePropertyMjsDefault.default)(this, "_errorMsg", "opps , cannot upload because bad connection your recipe please retry again  ");
+        this._addHandelShowWindow();
+        this._addHandelHideWindowWindow();
+    }
 }
 exports.default = new addRecipeView();
 
-},{"./view":"bWlJ9","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}]},["fA0o9","aenu9"], "aenu9", "parcelRequire7f27")
+},{"@swc/helpers/src/_define_property.mjs":"2NxdC","./view":"f8v16","@parcel/transformer-js/src/esmodule-helpers.js":"5oERU"}]},["cEtK8","WhRD4"], "WhRD4", "parcelRequire7f27")
 
-//# sourceMappingURL=index.e37f48ea.js.map
+//# sourceMappingURL=index.8b6dd95d.js.map
